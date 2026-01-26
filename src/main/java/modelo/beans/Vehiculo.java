@@ -25,9 +25,9 @@ public class Vehiculo {
         this.fechaHoraEntrada = fechaHoraEntrada;
     }
 
+
     public boolean equals(Object vehiculo) {
         boolean iguales = false;
-
         if (vehiculo != null && getClass() == vehiculo.getClass()) {
             Vehiculo clave1 = (Vehiculo) vehiculo;
             if (Objects.equals(this.matricula, clave1.matricula) &&
