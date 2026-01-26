@@ -20,7 +20,11 @@ public class Programa {
             switch (teclado.nextInt()) {
                 case 1:
                     System.out.println("Inserte la matrícula del nuevo coche: ");
-                    procesos.aniadirVehiculo(new Vehiculo(teclado.next()),vehiculos);
+                    if (procesos.validar(teclado.next())) {
+                        procesos.aniadirVehiculo(new Vehiculo(teclado.next()), vehiculos);
+                    } else {
+                        System.out.println("Esa matrícula no puede existir");
+                    }
                     break;
                 case 2:
                     System.out.println("Introduzca la matrícula del coche a buscar: ");

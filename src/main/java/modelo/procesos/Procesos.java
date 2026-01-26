@@ -43,6 +43,14 @@ public class Procesos {
 
     }
 
+    public boolean validar(String matricula){
+        if (matricula.trim().isEmpty() || !matricula.matches("[0-9]{4}[A-Z]{3}")){
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public HashSet<Vehiculo> rellenar(HashSet<Vehiculo> vehiculos){
         vehiculos.add(new Vehiculo("1234VVV"));
         vehiculos.add(new Vehiculo("1234MMN"));
